@@ -1,30 +1,34 @@
-first_name = "asana laad"
-name1= first_name.chomp.capitalize
-last_name="abdulai"
-name2= last_name.chomp.downcase
-full_name= "#{name1}" + "  " + "#{name2}"
-age= "22".to_i
-university= "Ondokuz mayis university".strip.chomp
-department= "Computer engineering"
-uni_abrev= university[0,3].upcase
-eng_student= department.end_with?("engineering")
-first_name_length= name1.length
-last_name_length= name2.length
-name_length= first_name_length + last_name_length
-puts "================================"
-puts "        STUDENT PROFILE         "
-puts "================================"
+puts "=============================="
+puts "     COURSE MANAGEMENT"
+puts "=============================="
+
+print "Enter your first name: "
+first_name = gets.chomp
+
+print "Enter your department: "
+department = gets.chomp
+
+courses = ["maximum number of courses is 6"]
+
+6.times do |i|
+  print "Enter course #{i + 1}: "
+  course = gets.chomp
+  courses << course
+end
 puts ""
-puts "First Name: #{name1}"
-puts "Last Name: #{name2.swapcase}"
-puts"Age: #{age.to_s}"
-puts "University: #{university}"
+puts "=============================="
+puts "     STUDENT INFORMATION"
+puts "=============================="
+
+puts "Student name: #{first_name}"
 puts "Department: #{department}"
+
 puts ""
-puts "First Name Length: #{name1.length} " 
-puts "Last Name Length: #{name2.length}"
-puts "Full Name Length: #{name_length}"
-puts "University Abbreviation: #{uni_abrev}"
-puts "Engineering Student: #{eng_student}"
-puts "Is it Ondokuz Mayis University: #{university.start_with?("Ondokuz")}"
-puts "================================"
+puts "Your courses:"
+puts courses
+
+puts "First course: #{courses.first}"
+puts "Last course: #{courses.last}"
+puts "Total courses: #{courses.size}"
+
+puts "=============================="
